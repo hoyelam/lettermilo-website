@@ -1,0 +1,27 @@
+name: Check website
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        base_url:
+          - https://lettermilo.com
+          - https://hoyelam.github.io/lettermilo-website
+    env:
+      SITE_BASE_URL: ${{ matrix.base_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build website
+        run: python3 build.py
+      - name: Check pages, assets, and metadata
+        run: python3 scripts/check_site.py
