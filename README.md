@@ -96,22 +96,34 @@ When the app changes, recapture these screens from the iOS repository before
 updating the website. Check the gallery at desktop and mobile widths and open
 each full-size image.
 
-## Sample word game
+## Sample exercises
 
-The homepage includes three picture-word rounds from the iPad app: **mat, map, tap**.
-Players choose a word, retry freely, hear the recorded word, and replay the game.
-Sound starts only after interaction and can be switched off. The demo does not use the
-microphone, record answers, or save progress.
+The homepage includes a letter exercise (**m**, choosing between a and m), followed
+by a picture-word exercise (**mat**, choosing between map, mat, and tap).
+Players can retry and replay freely. Sound starts only after interaction; muting it
+shows the letter hint. The demo does not use the microphone or save progress.
 
-`static/word-demo.js` controls the game. `static/demo/` contains the original word PNGs
-and Piksel narration clips copied from the iOS app's `LetterMilo/Resources/` directory.
+`static/word-demo.js` controls the two exercises. The card keeps the same slots for
+its prompt, answers, Milo, feedback, and action button in every state. Transitions
+do not scroll the page or remove the answer row.
+
+`static/demo/` contains original app imagery, Piksel narration, and the m phoneme.
+The phoneme and its edits are CC BY-SA 3.0; attribution, source, and edit details
+are in `static/demo/credits.txt`, linked beside the demo.
+
+`static/demo/milo/` contains transparent WebP encodes of Milo's existing idle,
+talking, listening, and native robot celebration animations. Animation starts
+with the example, uses a fixed image box, and falls back to stills for reduced
+motion, offscreen content, or a hidden tab. The Motion toggle lets visitors choose
+animation or stills explicitly. The success dance plays once and holds.
 Audio and images resolve relative to the script, including on a GitHub project URL.
-No JavaScript package installation is required. The rest of the site works without
-JavaScript; the sample displays an explanation when JavaScript is disabled.
+The site has no JavaScript package dependencies.
 
-To check a change, build the site, run `python3 scripts/check_site.py`, then try a wrong
-answer, a correct answer, all three rounds, replay, sound off, and keyboard navigation
-at both desktop and mobile widths. Also verify the game can finish if audio is unavailable.
+To check a change, build, run `python3 scripts/check_site.py`, and test start,
+wrong/correct letter, next, wrong/correct word, finish, and replay at desktop and
+mobile widths. Check that the card height, control positions, and page scroll stay
+stable. Also check sound off, audio failure, image retry, keyboard controls, and
+reduced motion.
 
 ## Before publishing
 

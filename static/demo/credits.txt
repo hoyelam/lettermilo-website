@@ -1,0 +1,21 @@
+LetterMilo phonics audio credits
+
+These human-recorded audio excerpts and LetterMilo's audio edits are available under
+Creative Commons Attribution–ShareAlike 3.0 Unported (CC BY-SA 3.0):
+https://creativecommons.org/licenses/by-sa/3.0/
+
+Original recordings are hosted by Wikimedia Commons. The original authors do not
+endorse LetterMilo. Attribution and the same license must accompany redistributed
+or adapted recordings. The license applies to these audio recordings and edits.
+
+m — /m/ — en-us-m.wav
+Original: Bilabial nasal.ogg
+Author: Peter Isotalo
+https://commons.wikimedia.org/wiki/User:Peter_Isotalo
+Source: https://commons.wikimedia.org/wiki/File:Bilabial_nasal.ogg
+License: CC-BY-SA-3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+Changes by LetterMilo: Excerpt 1.310–1.500 seconds. Interior of the second nasal closure, before the following vowel. Converted to mono 44.1 kHz, 16-bit PCM; DC offset removed; brief edge fades and silence padding added; level adjusted with a −3 dBFS peak ceiling; 60 ms raised-cosine release added after level adjustment; pitch, playback speed, and excerpt duration unchanged.
+
+Website filename: sound-m.wav. Copied without additional audio edits.
+
+Milo narration and artwork: Kin-Yee. All rights reserved.

@@ -1,0 +1,90 @@
+{
+  "idle": {
+    "file": "milo-idle.webp",
+    "bytes": 311884,
+    "pixels": [
+      384,
+      384
+    ],
+    "encodedFrames": 31,
+    "durationMs": 5000,
+    "loopCount": 0,
+    "authoredFps": 30,
+    "quality": 90,
+    "source": "LetterMilo/Resources/Assets.xcassets/MiloIdle00.imageset/MiloIdle00.png",
+    "notes": "Original bundled Blender-rendered PNG sequence; same authored rig and motion as iPad.",
+    "sha256": "1949eeaaee330362fd7a62f208733bd0450e4c5488e272af2a243901da586e7e"
+  },
+  "talking": {
+    "file": "milo-talking.webp",
+    "bytes": 300882,
+    "pixels": [
+      384,
+      384
+    ],
+    "encodedFrames": 30,
+    "durationMs": 1000,
+    "loopCount": 0,
+    "authoredFps": 30,
+    "quality": 90,
+    "source": "LetterMilo/Resources/Assets.xcassets/MiloTalk00.imageset/MiloTalk00.png",
+    "notes": "Original bundled Blender-rendered PNG sequence; same authored rig and motion as iPad.",
+    "sha256": "cde5d8fcb1ec4e242cd330ca7da460674d6a3ea0360f359068523ba9e99fc643"
+  },
+  "listening": {
+    "file": "milo-listening.webp",
+    "bytes": 295310,
+    "pixels": [
+      384,
+      384
+    ],
+    "encodedFrames": 30,
+    "durationMs": 1000,
+    "loopCount": 0,
+    "authoredFps": 30,
+    "quality": 90,
+    "source": "LetterMilo/Resources/Assets.xcassets/MiloListen00.imageset/MiloListen00.png",
+    "notes": "Original bundled Blender-rendered PNG sequence; same authored rig and motion as iPad.",
+    "sha256": "408e2ac227f0a3898994a90263f39faa4a12d0fa028753ea8ca2cab5f7856bca"
+  },
+  "success": {
+    "file": "milo-success.webp",
+    "bytes": 1088694,
+    "pixels": [
+      384,
+      384
+    ],
+    "encodedFrames": 97,
+    "durationMs": 3233,
+    "loopCount": 1,
+    "authoredFps": 30,
+    "quality": 90,
+    "source": "LetterMiloTests/Milo3DRenderTests.swift: test-exported Documents/MiloDanceReview/MiloRobot/000\u2026096.png",
+    "notes": "Native iPad SceneKit captures, frames000\u2013096. One shot; browser holds final frame.",
+    "sha256": "ebc743cb415a03a7533a1d44abdc8ebca8fa54841dfd9fcc4c8aa22ac2846b72",
+    "rig": "LetterMilo/Resources/Milo3D/MiloWardrobe3D.json",
+    "authoringSource": "AssetsSource/MiloRobot.blend",
+    "reference": "Docs/MiloCelebrationDances.md",
+    "rigSha256": "46ab604e1f74efd9aaa1a08a8fbc4708b377cffaa6de7946fa53a53ee233fd36"
+  },
+  "idle-still": {
+    "file": "milo-idle-still.webp",
+    "bytes": 10750,
+    "pixels": [
+      384,
+      384
+    ],
+    "sha256": "5e8bb1b38dab6478b30bf9d1b10458e9f15c7b46261b1528cccd040a173ce684",
+    "source": "LetterMilo/Resources/Assets.xcassets/MiloIdle00.imageset/MiloIdle00.png"
+  },
+  "success-still": {
+    "file": "milo-success-still.webp",
+    "bytes": 13030,
+    "pixels": [
+      384,
+      384
+    ],
+    "sha256": "5842015450c36139031fc194b96fcd687124b37ee7e2f4fa73e0e5f6134bcbb5",
+    "source": "LetterMiloTests/Milo3DRenderTests.swift: test-exported Documents/MiloDanceReview/MiloRobot/096.png"
+  }
+}
