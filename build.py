@@ -91,6 +91,7 @@ def page_html(key: str, body: str) -> str:
         <a href="/support/">Support</a>
         <a href="/privacy/">Privacy</a>
       </nav>"""
+    demo_script = f'<script src="{asset_url("word-demo.js")}" defer></script>' if key == "index" else ""
     document = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -115,6 +116,7 @@ def page_html(key: str, body: str) -> str:
   <meta property="og:locale" content="{SITE['locale']}">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">{json.dumps(structured, ensure_ascii=False)}</script>
+  {demo_script}
 </head>
 <body class="page-{key}">
   <a class="skip-link" href="#main">Skip to content</a>

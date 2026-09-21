@@ -107,6 +107,11 @@ def main() -> int:
     for required in (DIST / ".nojekyll", DIST / "robots.txt", DIST / "sitemap.xml", DIST / "assets" / "site.css", DIST / "assets" / "favicon.svg"):
         if not required.exists():
             errors.append(f"Missing {required.relative_to(DIST)}")
+    demo_assets = ["word-demo.js"] + [f"demo/word-{word}.png" for word in ("mat", "map", "tap")]
+    demo_assets += [f"demo/{clip}.m4a" for clip in ("picture-word", "retry-picture-word", "great-job", "word-mat", "word-map", "word-tap")]
+    for asset in demo_assets:
+        if not (DIST / "assets" / asset).is_file():
+            errors.append(f"Missing word-game asset: {asset}")
     if (DIST / "sitemap.xml").exists():
         locations = {node.text for node in ET.parse(DIST / "sitemap.xml").iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")}
         if locations != {BASE_URL + route for route in ["/", "/privacy/", "/terms/", "/support/"]}:

@@ -5,7 +5,7 @@
       <h1>Little sounds.<br><span>Big discoveries.</span></h1>
       <p class="lede">Practise letter sounds, words, and short sentences with Milo on iPad.</p>
       <div class="button-row">
-        <a class="button button-primary" href="#how-it-works">See the activities</a>
+        <a class="button button-primary" href="#try-it">Try an exercise</a>
         <a class="button button-secondary" href="/support/">Get help</a>
       </div>
       <p class="coming-soon">Coming soon to the App Store for iPad</p>
@@ -14,6 +14,65 @@
       <img class="word-token apple" src="/assets/apple.png" alt="A red apple">
       <img class="milo" src="/assets/milo.png" alt="Milo, a smiling grey mouse with a teal backpack">
       <img class="word-token train" src="/assets/train.png" alt="A small train">
+    </div>
+  </div>
+</section>
+
+<section class="section demo-section" id="try-it" aria-labelledby="demo-heading">
+  <div class="shell demo-layout">
+    <div class="demo-introduction">
+      <p class="eyebrow">A little taste of LetterMilo</p>
+      <h2 id="demo-heading">Try a word game.</h2>
+      <p class="lede">Look at the picture. Find its word. Play three short rounds with Milo, just like in the iPad app.</p>
+      <p class="demo-detail">Three pictures. As many tries as you need.</p>
+      <p class="demo-detail">Sound is optional. No microphone needed.</p>
+    </div>
+    <div class="word-demo" id="word-demo" data-state="intro" aria-label="Picture word game">
+      <div class="demo-toolbar">
+        <span class="demo-label">Picture words</span>
+        <button class="demo-sound" type="button" data-demo-sound aria-pressed="true" hidden><span data-demo-sound-label>Sound on</span></button>
+      </div>
+      <div class="demo-intro" data-demo-intro>
+        <div class="demo-preview" aria-hidden="true">
+          <img class="demo-preview-picture" src="/assets/demo/word-mat.png" alt="" width="768" height="768" loading="lazy">
+          <img class="demo-preview-milo" src="/assets/milo.png" alt="" width="512" height="512" loading="lazy">
+        </div>
+        <h3>Let’s find some words.</h3>
+        <p>Look at a picture, then tap the word that matches.</p>
+        <button class="button button-primary" type="button" data-demo-start hidden>Play with Milo <span aria-hidden="true">→</span></button>
+        <noscript><p>Turn on JavaScript to try the word game.</p></noscript>
+      </div>
+      <div class="demo-play" data-demo-play hidden>
+        <div class="demo-progress-row">
+          <p data-demo-progress>Picture 1 of 3</p>
+          <progress data-demo-progressbar max="3" value="0" aria-label="Pictures completed"></progress>
+        </div>
+        <h3 class="demo-question" data-demo-question tabindex="-1">Find the picture’s word.</h3>
+        <div class="demo-chalkboard">
+          <img data-demo-picture src="/assets/demo/word-mat.png" alt="A mat" width="768" height="768" loading="lazy">
+          <p class="demo-answer" data-demo-answer hidden></p>
+        </div>
+        <button class="button button-secondary demo-image-retry" type="button" data-demo-image-retry hidden>Try loading again</button>
+        <div class="demo-choices" data-demo-choices aria-label="Choose the matching word"></div>
+        <div class="demo-help">
+          <button class="demo-hear" type="button" data-demo-hear><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M11 4 5 9H2v6h3l6 5V4Zm4 4a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hear the word</button>
+          <button class="demo-instruction" type="button" data-demo-instruction>Hear instructions</button>
+        </div>
+        <div class="demo-milo-message">
+          <img src="/assets/milo.png" width="512" height="512" alt="" loading="lazy">
+          <div><span class="demo-speaker">Milo</span><p data-demo-feedback role="status" aria-live="polite" aria-atomic="true">Look at the picture. Tap the word that matches.</p></div>
+        </div>
+        <p class="demo-audio-status" data-demo-audio-status role="status" aria-live="polite"></p>
+        <button class="button button-primary demo-next" type="button" data-demo-next hidden>Next picture <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="demo-complete" data-demo-complete hidden>
+        <div class="demo-finish-art" aria-hidden="true"><span>★</span><img src="/assets/milo.png" alt="" width="512" height="512" loading="lazy"><span>★</span></div>
+        <p class="eyebrow">Three pictures matched</p>
+        <h3 data-demo-complete-title tabindex="-1">You did it!</h3>
+        <p>Thanks for playing with Milo.</p>
+        <button class="button button-primary" type="button" data-demo-replay>Play again <span aria-hidden="true">↻</span></button>
+        <p class="demo-finish-note">More little adventures are coming to iPad.</p>
+      </div>
     </div>
   </div>
 </section>

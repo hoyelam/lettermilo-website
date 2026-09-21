@@ -84,6 +84,23 @@ The iOS repository owns the Blender source and high-resolution master. After cha
 branding there, copy `AssetsSource/Branding/web/` into this repository's `static/` directory.
 The app is not required to build or publish the website.
 
+## Sample word game
+
+The homepage includes three picture-word rounds from the iPad app: **mat, map, tap**.
+Players choose a word, retry freely, hear the recorded word, and replay the game.
+Sound starts only after interaction and can be switched off. The demo does not use the
+microphone, record answers, or save progress.
+
+`static/word-demo.js` controls the game. `static/demo/` contains the original word PNGs
+and Piksel narration clips copied from the iOS app's `LetterMilo/Resources/` directory.
+Audio and images resolve relative to the script, including on a GitHub project URL.
+No JavaScript package installation is required. The rest of the site works without
+JavaScript; the sample displays an explanation when JavaScript is disabled.
+
+To check a change, build the site, run `python3 scripts/check_site.py`, then try a wrong
+answer, a correct answer, all three rounds, replay, sound off, and keyboard navigation
+at both desktop and mobile widths. Also verify the game can finish if audio is unavailable.
+
 ## Before publishing
 
 Keep the privacy policy aligned with the deployed hosting and app telemetry setup,
