@@ -84,6 +84,18 @@ The iOS repository owns the Blender source and high-resolution master. After cha
 branding there, copy `AssetsSource/Branding/web/` into this repository's `static/` directory.
 The app is not required to build or publish the website.
 
+## App screenshots
+
+`static/screenshots/` contains original 2064 × 2752 PNG captures of the iPad app,
+with the current Peekaboo branding. Captured on 21 September 2026 using the
+13-inch iPad Pro simulator and app source at `9fd0b11`. The wardrobe uses sample
+progress. Device frames are CSS; the screenshots are not cropped or retouched.
+Each image links to its full-resolution original and loads lazily on the homepage.
+
+When the app changes, recapture these screens from the iOS repository before
+updating the website. Check the gallery at desktop and mobile widths and open
+each full-size image.
+
 ## Sample word game
 
 The homepage includes three picture-word rounds from the iPad app: **mat, map, tap**.
