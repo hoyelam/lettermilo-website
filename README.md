@@ -29,10 +29,10 @@ gh workflow run pages.yml --repo hoyelam/lettermilo-website --ref main
 ```
 
 The workflow reads the configured Pages address, builds and checks the site, then deploys
-`dist/`. Before the domain is connected, the address is
-`https://hoyelam.github.io/lettermilo-website/`. Navigation and asset URLs include the
-project path. If configuring a fresh repository, choose **GitHub Actions** as its Pages
-source under Settings → Pages.
+`dist/` to `https://lettermilo.com/`. It also supports the GitHub project-site address
+`https://hoyelam.github.io/lettermilo-website/` when no custom domain is configured,
+including the project path in navigation and asset URLs. If configuring a fresh
+repository, choose **GitHub Actions** as its Pages source under Settings → Pages.
 
 To check the project URL locally:
 
@@ -64,8 +64,8 @@ Cloudflare records use **DNS only**, with TTL set to **Auto**:
 | CNAME | `www` | `hoyelam.github.io` |
 
 Keep the `_github-pages-challenge-hoyelam` TXT record: it proves domain ownership.
-The repository's Pages custom domain is `lettermilo.com`; enable **Enforce HTTPS**
-after its certificate is ready. GitHub handles the `www` redirect to the main domain.
+The repository's Pages custom domain is `lettermilo.com`, with **Enforce HTTPS** enabled.
+GitHub manages the certificate and redirects `www` to the main domain.
 With an Actions deployment, the Pages setting controls the domain; a `CNAME` file is not needed.
 
 After publishing, check `/`, `/privacy/`, `/terms/`, `/support/`, and an unknown path.
