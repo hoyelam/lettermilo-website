@@ -73,7 +73,6 @@ def page_html(key: str, body: str) -> str:
     body = body.replace("/assets/logo.png", asset_url("logo.png"))
     canonical = SITE["base_url"] + page["route"]
     robots = page.get("robots", "index, follow")
-    author_credit = "Development by" if key in {"privacy", "terms"} else "Made by"
     structured = {
         "@context": "https://schema.org",
         "@type": "WebSite" if key == "index" else "WebPage",
@@ -85,11 +84,6 @@ def page_html(key: str, body: str) -> str:
             "name": SITE["publisher"],
             "legalName": SITE["publisher"],
             "email": SITE["support_email"],
-            "founder": {
-                "@type": "Person",
-                "name": SITE["author"],
-                "alternateName": SITE["author_display_name"],
-            },
         },
     }
     nav = """<nav aria-label="Main navigation">
@@ -104,7 +98,7 @@ def page_html(key: str, body: str) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(page['title'])}</title>
   <meta name="description" content="{html.escape(page['description'])}">
-  <meta name="author" content="{SITE['author']}">
+  <meta name="author" content="{SITE['publisher']}">
   <meta name="robots" content="{robots}">
   <meta name="theme-color" content="#f8f7ec">
   <link rel="canonical" href="{canonical}">
@@ -130,10 +124,9 @@ def page_html(key: str, body: str) -> str:
     <div>{logo()}<p>A small reading companion for iPad.</p></div>
     <div class="footer-links" aria-label="Footer links">
       <a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a>
-      <a href="mailto:{SITE['support_email']}">Email Hoye</a>
+      <a href="mailto:{SITE['support_email']}">Email support</a>
     </div>
     <div class="legal-line">
-      <p>{author_credit} <a href="{SITE['author_url']}">{SITE['author_display_name']}</a></p>
       <p>©{SITE['copyright_year']} {SITE['publisher']}. All rights reserved.</p>
       <p>Milo, the LetterMilo character, and its artwork are owned by {SITE['publisher']}.</p>
     </div>
