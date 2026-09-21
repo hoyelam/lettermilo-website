@@ -18,7 +18,7 @@ Open <http://127.0.0.1:8765/>. `dist/` is generated and ignored by Git.
 
 ## GitHub Pages
 
-`Check website` runs on pushes and pull requests. It verifies both the future custom-domain
+`Check website` runs on pushes and pull requests. It verifies both the custom-domain
 layout and the GitHub project-site layout, including page links, assets, and metadata.
 
 `Publish GitHub Pages` is **manual**. Pushing to `main` does not publish the website.
@@ -44,20 +44,33 @@ SITE_BASE_URL=https://hoyelam.github.io/lettermilo-website python3 scripts/check
 Run the default build again for the root-level local preview. See GitHub's
 [custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-## Connect lettermilo.com later
+## Domain configuration
 
-No `CNAME` or custom domain is configured before the domain is owned.
+The website uses **https://lettermilo.com/**. Cloudflare manages the domain and DNS;
+GitHub Pages hosts the site. Domain ownership is verified on the `hoyelam` GitHub account.
 
-1. Purchase `lettermilo.com` and verify domain ownership in GitHub Pages.
-2. Set `lettermilo.com` as the custom domain in this repository's Pages settings.
-3. Configure the DNS records described in GitHub's
-   [custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-   For `www`, point a CNAME to `hoyelam.github.io`; use the documented apex records for `@`.
-4. Enable **Enforce HTTPS** once the certificate is ready, then run the publishing workflow.
-5. Check `/`, `/privacy/`, `/terms/`, `/support/`, and an unknown path. Verify the app's links
-   from an iPad. The workflow automatically uses the custom-domain root without a repository prefix.
+Cloudflare records use **DNS only**, with TTL set to **Auto**:
 
+| Type | Name | Destination |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153` |
+| AAAA | `@` | `2606:50c0:8001::153` |
+| AAAA | `@` | `2606:50c0:8002::153` |
+| AAAA | `@` | `2606:50c0:8003::153` |
+| CNAME | `www` | `hoyelam.github.io` |
+
+Keep the `_github-pages-challenge-hoyelam` TXT record: it proves domain ownership.
+The repository's Pages custom domain is `lettermilo.com`; enable **Enforce HTTPS**
+after its certificate is ready. GitHub handles the `www` redirect to the main domain.
 With an Actions deployment, the Pages setting controls the domain; a `CNAME` file is not needed.
+
+After publishing, check `/`, `/privacy/`, `/terms/`, `/support/`, and an unknown path.
+The app links use the same domain. GitHub's [custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+covers DNS and certificate troubleshooting.
 
 ## Content and artwork
 
@@ -73,7 +86,7 @@ The app is not required to build or publish the website.
 
 ## Before publishing
 
-Review the privacy draft against the final GitHub Pages hosting and app telemetry setup,
+Keep the privacy policy aligned with the deployed hosting and app telemetry setup,
 including request logs, Sentry/Mixpanel retention, and privacy declarations. Keep the
 coming-soon copy until there is an App Store listing. Contact: Hoye Lam / Kin-Yee,
 `hoyelam@kin-yee.com`; Netherlands Chamber of Commerce number 75399423.
